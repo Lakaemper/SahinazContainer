@@ -5,17 +5,22 @@
  */
 package sahinazcontainer;
 
+import java.awt.Color;
+import simplegui.*;
 /**
  *
  * @author rolflakaemper
  */
-public class SahinazContainer {
+public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Main sc = new Main();
+    }
+    
+    public Main(){
+        Harbour h = new Harbour();
+        h.visualize();
     }
     
 }
