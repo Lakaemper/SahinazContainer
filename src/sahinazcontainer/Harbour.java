@@ -13,13 +13,14 @@ public class Harbour {
     public static final int ROWS = 60;
     public static final int COLUMNS = 42;
     public static final int MAXFILLHEIGHT = 3;
-    //
-    protected int[][] data = new int[ROWS][COLUMNS];
-    protected int[][] streets = {
+        protected int[][] streets = {
         {28,0,4,COLUMNS},
         {0,13,ROWS,2},
         {0,27,ROWS,2}
     };
+    //
+    protected int[][] data = new int[ROWS][COLUMNS];
+    private int numberOfContainers = 0;
     
     // ------------------------------------------------------------------
     public Harbour(){
@@ -32,6 +33,7 @@ public class Harbour {
         for (int r = 0; r < ROWS; r++){
             for (int c = 0; c < COLUMNS; c++){
                 data[r][c] = (int)(Math.random() * MAXFILLHEIGHT);
+                numberOfContainers += data[r][c];
             }
         }
         //
